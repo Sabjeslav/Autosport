@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,900&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@font-face {
+    font-family: "Gothic-No1";
+    src: url("../fonts/Gothic-No1.otf") format("opentype");
+}
+
+
+html {
+    transition: 1s;
+    opacity: 1;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    user-select: none;
+}
+body {
+    color: #fff;
+    margin:0;
+    padding:0;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.body_hide {
+    opacity: 0;
+    transition: .9s opacity ease-in-out;
+}
+
+.body_visible {
+    opacity: 1;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 40vw;
+    padding: 20vw 0 5vw;
+    position: relative;
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+    width: 100vw;
+}
+header, header:before {
+    background: 50% 50% / cover;
+}
+header::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-color: #8a8;
+    background-image: url("../background-images/rally-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform-origin: center center 0;
+    -webkit-transform: translateZ(-2px) scale(3);
+    transform-origin: center center 0;
+    transform: translateZ(-2px) scale(3);
+    z-index: -1;
+    min-height: 100vh;
+}
+header h1 {
+    font-weight: normal;
+    letter-spacing: 20px;
+    text-align: center;
+    margin: 0 0 20% 0;
+    font-family: Gothic-No1;
+    font-size: 150px;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0, rgba(0, 0, 0, 0.5)  -1px -1px 0,
+    rgba(0, 0, 0, 0.5)  -1px 1px 0, rgba(0, 0, 0, 0.5)  5px -1px 0;
+    text-transform: uppercase;
+
+}
+header p {
+    background-color: hsla(0, 0%, 100%,0.1);
+}
+main {
+    background-color: hsl(60, 10%, 10%);
+    opacity: 0.9;
+    line-height: 1.7;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+main > h2{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+main > .container{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > .container, .race > span{
+    font-size: 30px;
+    color: white;
+    font-family: "Trebuchet MS";
+}
+
+.image{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 80%;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 2% auto 2% auto;
+    padding: 10px;
+}
+
+.image > #text{
+    text-align: left;
+    padding: 1%;
+    font-family: 'Play', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.track {
+    width: 30%;
+    max-height: 10%;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor:pointer;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+main > hr{
+    width: 80vw;
+}
+
+#car2{
+    position: relative;
+    background-image: url("../background-images/quattro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin-top: 2%;
+    /*border-bottom: 5px solid white;*/
+    box-sizing: border-box;
+    z-index: -10;
+}
+
+#triangle_top{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    border: 75px solid hsl(60, 10%, 10%);
+
+}
+
+#triangle_mid{
+    margin: 0;
+    /*padding: 0;*/
+    box-sizing: border-box;
+    float: left;
+    border-top: 50px solid red;
+    border-right: 50px solid white;
+    width: 25%;
+    text-align: center;
+    z-index: 10;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 5px solid white;
+    height: 45px;
+}
+
+.top > span{
+    padding: 0;
+    line-height: 0.7;
+    z-index: -999;
+    width: 100vw;
+    height: auto;
+    font-size: 50px;
+    text-align: center;
+    border-top: 5px solid white;
+    background-color: white;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    color: black;
+}
+
+#car3{
+    position: relative;
+    background-image: url("../background-images/lancia.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    border-bottom: 5px solid white;
+    box-sizing: border-box;
+    z-index: -10;
+}
+
+#triangle_right{
+    margin: 0;
+    /*padding: 0;*/
+    box-sizing: border-box;
+    float: right;
+    border-bottom: 50px solid red;
+    border-left: 40px solid white;
+    width: 25%;
+    text-align: center;
+    z-index: 10;
+}
+
+#car4{
+    position: relative;
+    background-image: url("../background-images/hyundai.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* border-bottom: 5px solid white;*/
+    box-sizing: border-box;
+    z-index: -10;
+}
+
+.race{
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 10vh;
+    background-color: hsl(60, 5%, 22%);
+    color: white;
+    position: relative;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin-top: 10vh;
+}
+
+.race > span{
+    display: flex;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: Gothic-No1;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+#car5{
+    width: 100%;
+    position: relative;
+    background-image: url("../background-images/kamaz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* border-bottom: 5px solid white;*/
+    box-sizing: border-box;
+    z-index: -10;
+}
+
+#car6{
+    width: 100%;
+    position: relative;
+    background-image: url("../background-images/nurnburg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* border-bottom: 5px solid white;*/
+    box-sizing: border-box;
+    z-index: -10;
+}
+
+footer{
+    padding: 2%;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    font-family: Gothic-No1;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+#main{
+    display: flex;
+    height: 5vh;
+    width: 30%;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#main > span{
+    margin: auto;
+}
+
+#main:hover{
+    background-color: #3e3e3e;
+    color: black;
+    transition: 0.5s;
+}
+
+#media{
+    /*  border: 1px solid white;*/
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.social a {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background: #fff;
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+    color: #000;
+    padding: 10px;
+    font-size: 16.5px !important;
+}
+
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+
+.github a:hover {background: #191919; color: #fff;}
+.youtube a:hover {background: #c4302b; color: #fff;}
+.google-pluse a:hover {background: #DD4B39; color: #fff;}
+.twitter a:hover {background: #00acee; color: #fff;}
+.instagram a:hover {background: #9b3287; color: #fff;}
+.facebook a:hover {background: #3b5998; color: #fff;}
+.skype a:hover {background: #00aff0; color: #fff;}
+.vk a:hover {background: #5d84ae; color: #fff;}
+.odnoklassniki a:hover {background: #f93; color: #fff;}
+.pinterest a:hover {background: #c8232c; color: #fff;}
+.linkedin a:hover {background: #0e76a8; color: #fff;}
+.telegram a:hover {background: #249bd7; color: #fff;}
+.tumblr a:hover {background: #34526f; color: #fff;}
+.windows a:hover {background: #125acd; color: #fff;}
+.whatsapp a:hover {background: #50b154; color: #fff;}
+.weibo a:hover {background: #d52b2b; color: #fff;}
+.dropbox a:hover {background: #1087dd; color: #fff;}
+
+
+@media all and (max-width: 1400px) {
+    header h1 {
+        font-size: 100px;
+    }
+}
+
+@media all and (max-width: 1550px){
+    .top > span{
+        font-size: 35px;
+        padding-top: 0.5%;
+    }
+}
+
+@media all and (max-width: 1350px) {
+    #car4 > .top > span {
+        font-size: 25px !important;
+        padding-top: 1%;
+    }
+
+    .image > #text{
+        font-size: 25px;
+    }
+}
